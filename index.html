@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+   
+
+
+    <div class="typewriter">
+        <h1>Created by Dhafin & Fauzan</h1>
+      </div>
+
+ <input type="text" placeholder="text or url" id="qrText">
+          <button onclick="generateQR()" class="button">
+            <span class="button-content">Generate! </span>
+          </button>
+    
+        <div id="imgBox">
+        <img src="" id="qrimage">
+      </div>
+         
+         <div class="accordion">
+            <div class="img1">
+        <img src="/img/smkn4.png" alt=""  class="center" width="180px">
+
+    </div>
+            <h1>Frequently Asked Question</h1>
+            <div class="accordion-item">
+                <input type="checkbox" id="accordion1">
+                <label for="accordion1" class="accordion-item-title"><span class="icon"></span>Apa fungsi QR code?</label>
+                <div class="accordion-item-desc">Mempermudah transfer informasi. QR Code dapat digunakan untuk menyimpan berbagai jenis informasi, seperti teks, URL, nomor telepon, alamat email, dan lainnya. Informasi ini dapat diakses dengan mudah dengan memindai QR Code menggunakan perangkat seluler. </div>
+            </div>
+        
+           
+        
+        </div>
+
+
+    <script>
+let imgBox = document.getElementById("imgBox");
+let qrimage = document.getElementById("qrimage");
+let qrText = document.getElementById("qrText");
+
+function generateQR(){
+qrimage.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + qrText.value
+
+}
+
+    </script>
+</body>
+</html>
